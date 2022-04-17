@@ -25,7 +25,8 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":Lex 20<cr>", opts)
+-- Open netwr with current file's directory.
+keymap("n", "<leader>e", ":20Lex %:h <cr>", opts)
 
 keymap("n", "ss", "<C-w>s", opts)
 keymap("n", "sv", "<C-w>v", opts)
