@@ -9,6 +9,8 @@ require "plugin.telescope"
 require "plugin.ts-autotag"
 require "plugin.autopairs"
 require "plugin.cmp"
+require "plugin.lsp"
+require "plugin.comment"
 
 -- Color scheme
 vim.cmd "colorscheme ayu"

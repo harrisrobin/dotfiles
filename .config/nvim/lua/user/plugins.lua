@@ -48,9 +48,17 @@ return packer.startup(function(use)
   use {'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }}
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
-  
+  use 'tpope/vim-fugitive'
+  use 'tpope/vim-rhubarb'
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+  }
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+
   -- CMP plugins
-  use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -62,6 +70,9 @@ return packer.startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   use "rafamadriz/friendly-snippets"
 
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/nvim-lsp-installer'
 
   -- Themes
   use "sainnhe/everforest"

@@ -1,6 +1,7 @@
 local status, telescope = pcall(require, "telescope")
 if (not status) then return end
 
+
 local keymap = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}
 
@@ -16,12 +17,16 @@ end
 local telescope = require('telescope')
 local actions = require('telescope.actions')
 
-telescope.setup{
+telescope.setup {
   defaults = {
+    prompt_prefix = " ",
+    selection_caret = " ",
+    path_display = { "smart" },
+
     mappings = {
       n = {
         ["q"] = actions.close
       },
     },
-  }
+  },
 }
