@@ -2,11 +2,11 @@ local status, treesitter = pcall(require, "treesitter")
 if (not status) then return end
 
 
-require'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { 
-    "c", 
-    "lua", 
+  ensure_installed = {
+    "c",
+    "lua",
     "rust",
     "tsx",
     "toml",
@@ -16,7 +16,13 @@ require'nvim-treesitter.configs'.setup {
     "yaml",
     "swift",
     "html",
-    "scss" 
+    "scss",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "dockerfile",
+    "html",
+    "solidity"
   },
 
   indent = {
@@ -39,7 +45,7 @@ require'nvim-treesitter.configs'.setup {
     -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
     -- the name of the parser)
     -- list of language that will be disabled
-    disable = { },
+    disable = {},
 
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).

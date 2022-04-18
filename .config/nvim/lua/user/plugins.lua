@@ -43,9 +43,9 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-  use {"iamcco/markdown-preview.nvim", run = "cd app && yarn", cmd = "MarkdownPreview"} -- Open a markdown file in the browser
-  use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
-  use {'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }}
+  use { "iamcco/markdown-preview.nvim", run = "cd app && yarn", cmd = "MarkdownPreview" } -- Open a markdown file in the browser
+  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+  use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/plenary.nvim' } } }
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   use 'tpope/vim-fugitive'
@@ -53,7 +53,7 @@ return packer.startup(function(use)
   use {
     'numToStr/Comment.nvim',
     config = function()
-        require('Comment').setup()
+      require('Comment').setup()
     end
   }
   use 'JoosepAlviste/nvim-ts-context-commentstring'
@@ -66,7 +66,7 @@ return packer.startup(function(use)
   use 'hrsh7th/nvim-cmp'
 
   -- Snippets
-  use 'L3MON4D3/LuaSnip' 
+  use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
   use "rafamadriz/friendly-snippets"
 
@@ -77,7 +77,7 @@ return packer.startup(function(use)
   -- Themes
   use "sainnhe/everforest"
   use "ayu-theme/ayu-vim"
-  use "altercation/vim-colors-solarized"
+  use "morhetz/gruvbox"
 
   -- tabline
   use {
@@ -87,14 +87,14 @@ return packer.startup(function(use)
   use {
     'kdheepak/tabline.nvim',
     config = function()
-      require'tabline'.setup {
+      require 'tabline'.setup {
         -- Defaults configuration options
         enable = true,
         options = {
-        -- If lualine is installed tabline will use separators configured in lualine by default.
-        -- These options can be used to override those settings.
-          section_separators = {'', ''},
-          component_separators = {'', ''},
+          -- If lualine is installed tabline will use separators configured in lualine by default.
+          -- These options can be used to override those settings.
+          section_separators = { '', '' },
+          component_separators = { '', '' },
           max_bufferline_percent = 66, -- set to nil by default, and it uses vim.o.columns * 2/3
           show_tabs_always = false, -- this shows tabs only when there are more than one tab or if the first tab is named
           show_devicons = true, -- this shows devicons in buffer section
@@ -105,12 +105,12 @@ return packer.startup(function(use)
           show_tabs_only = false, -- this shows only tabs instead of tabs + buffers
         }
       }
-      vim.cmd[[
+      vim.cmd [[
         set guioptions-=e " Use showtabline in gui vim
         set sessionoptions+=tabpages,globals " store tabpages and globals in session
       ]]
     end,
-    requires = { { 'hoob3rt/lualine.nvim', opt=true }, {'kyazdani42/nvim-web-devicons', opt = true} }
+    requires = { { 'hoob3rt/lualine.nvim', opt = true }, { 'kyazdani42/nvim-web-devicons', opt = true } }
   }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

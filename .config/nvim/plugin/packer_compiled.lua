@@ -120,6 +120,11 @@ _G.packer_plugins = {
     path = "/Users/harris/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  gruvbox = {
+    loaded = true,
+    path = "/Users/harris/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/morhetz/gruvbox"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/harris/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -198,11 +203,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/harris/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["vim-colors-solarized"] = {
-    loaded = true,
-    path = "/Users/harris/.local/share/nvim/site/pack/packer/start/vim-colors-solarized",
-    url = "https://github.com/altercation/vim-colors-solarized"
   },
   ["vim-fugitive"] = {
     loaded = true,

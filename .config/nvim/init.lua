@@ -13,5 +13,5 @@ require "plugin.lsp"
 require "plugin.comment"
 
 -- Color scheme
+vim.cmd "let ayucolor='dark'"
 vim.cmd "colorscheme ayu"
-
