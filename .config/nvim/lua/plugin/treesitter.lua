@@ -10,7 +10,6 @@ require 'nvim-treesitter.configs'.setup {
     "rust",
     "tsx",
     "toml",
-    "fish",
     "php",
     "json",
     "yaml",
@@ -19,10 +18,12 @@ require 'nvim-treesitter.configs'.setup {
     "scss",
     "javascript",
     "javascriptreact",
+    "typescriptreact",
     "typescript",
     "dockerfile",
     "html",
-    "solidity"
+    "solidity",
+    "fish"
   },
 
   indent = {
