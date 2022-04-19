@@ -57,6 +57,7 @@ return packer.startup(function(use)
     end
   }
   use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use 'lambdalisue/fern.vim'
 
   -- CMP plugins
   use 'hrsh7th/cmp-nvim-lsp'

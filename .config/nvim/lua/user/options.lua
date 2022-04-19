@@ -39,3 +39,8 @@ vim.opt.shortmess:append "c"
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+
+vim.cmd [[
+  autocmd StdinReadPre * let s:std_in=1
+  autocmd VimEnter * ++nested Fern %:h | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+]]
