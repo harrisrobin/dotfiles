@@ -57,6 +57,9 @@ set -gx PATH node_modules/.bin $PATH
 set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 
+# Rust
+set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
+
 # GCloud
 # The next line updates PATH for the Google Cloud SDK.
 bass source '$HOME/google-cloud-sdk/path.bash.inc'
@@ -73,4 +76,11 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# Mimic zsh behavior to be able to 'cd ...'
+function ...
+     cd ../..
+end
 
+function ....
+     cd ../../..
+end
